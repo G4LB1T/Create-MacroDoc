@@ -20,7 +20,13 @@ Text to be shown in the document body
 
 ## Usage Example 
 Create a document in the path c:\out\bla.doc with a macro stored in c:\macros\m.txt, in the document's body have the text "hello" and a link to google.com with the label "GOOGLE"
+'''
 Create-MacroDoc -docPath "c:\out\bla.doc" -macroContentPath "c:\macros\m.txt" -docText "hello" -linkText "GOOGLE" -linkPath "https://www.google.com"
+'''
 
 ## Note
 You need to have Microsoft Office installed in order to run this script.
+Modern versions of Windows\Office require to set the following registry key in order to allow the Word COM object to edit VBA Object in
+'''
+HKEY_CURRENT_USER\Software\Microsoft\Office\<OfficeVersion>\Word\Security\AccessVBOM
+'''
